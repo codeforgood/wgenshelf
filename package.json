@@ -1,0 +1,14 @@
+{
+  "name": "schoolnotes",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "3.x",
+    "mongoose": "3.x",
+    "consolidate": "0.x",
+    "swig": "0.x"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  }
+}
