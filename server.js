@@ -39,8 +39,9 @@ app.get('/wgenshelf', function(req, res) {
     	app: 'Wgen Shelf'
   	});
 });
-
+app.get('/wgenshelf/component/:id', shelf.getComponent);
 app.get('/wgenshelf/components', shelf.getComponents);
 app.get('/wgenshelf/addcomponent', shelf.addComponent);
+
 app.post('/wgenshelf/submitcomponent', shelf.submitComponent);
 /******Routes*******/

@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+{% autoescape true %}
+<h2>{{component.name}}</h2>
+<p>{{component.desc}}</p>
+<a>{{component.url}}</a>
+<code>
+<pre>
+{{component.code}}
+</pre>
+</code>
+{% endautoescape %}
+{% endblock %}

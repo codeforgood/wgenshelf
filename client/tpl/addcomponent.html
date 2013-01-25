@@ -5,13 +5,25 @@
   <div class="control-group">
     <label class="control-label" for="componentName">Name</label>
     <div class="controls">
-      <input type="text" name="componentName" id="componentName" placeholder="Name">
+      <input type="text" name="componentName" id="componentName" placeholder="Name" required>
     </div>
   </div>
   <div class="control-group">
     <label class="control-label" for="componentDesc">Description</label>
     <div class="controls">
       <textarea rows="5" name="componentDesc" id="componentDesc" placeholder="Description"></textarea>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="codeRepo">Repository URL</label>
+    <div class="controls">
+       <input type="url" name="codeRepo" id="codeRepo" placeholder="URL">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="componentCode">Code Block</label>
+    <div class="controls">
+      <textarea rows="10" class="input-xxlarge" name="componentCode" id="componentCode" placeholder="Code"></textarea>
     </div>
   </div>
   <div class="form-actions">
