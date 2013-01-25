@@ -10,13 +10,12 @@
 			<th>Name</th>
 			<th>Description</th>
 		</tr>
-		
+		{% for comp in components -%}
 		<tr>
-			{% for comp in components -%}
-				<td>{{comp.name}}</td>
-				<td>{{comp.desc}}</td>
-			{%- endfor %}
+			<td><a href="/wgenshelf/component/{{comp._id}}">{{comp.name}}</a></td>
+			<td>{{comp.desc}}</td> 
 		</tr>
+		{%- endfor %}
 	</table>
 	 
 	 
