@@ -1,20 +1,17 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<p>Submit Component to Wgen Shelf</p>
-
-
-<form class="form-horizontal">
+<form method="POST" action= "/wgenshelf/submitcomponent" class="form-horizontal">
   <div class="control-group">
     <label class="control-label" for="componentName">Name</label>
     <div class="controls">
-      <input type="text" id="componentName" placeholder="Name">
+      <input type="text" name="componentName" id="componentName" placeholder="Name">
     </div>
   </div>
   <div class="control-group">
     <label class="control-label" for="componentDesc">Description</label>
     <div class="controls">
-      <textarea rows="5" id="componentDesc" placeholder="Description"></textarea>
+      <textarea rows="5" name="componentDesc" id="componentDesc" placeholder="Description"></textarea>
     </div>
   </div>
   <div class="form-actions">

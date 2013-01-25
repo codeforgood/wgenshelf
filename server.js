@@ -18,6 +18,7 @@ swig.init({ root: __dirname + '/client/tpl', allowErrors: true });
 app.configure(function () {
     app.use(express.logger('default'));     /* 'default', 'short', 'tiny', 'dev' */
     app.use(express.static(__dirname + '/client'));
+    app.use(express.bodyParser());
 });
 
 var port = process.env.PORT || 5000;
@@ -41,4 +42,5 @@ app.get('/wgenshelf', function(req, res) {
 
 app.get('/wgenshelf/components', shelf.getComponents);
 app.get('/wgenshelf/addcomponent', shelf.addComponent);
+app.post('/wgenshelf/submitcomponent', shelf.submitComponent);
 /******Routes*******/
