@@ -2,4 +2,9 @@
 
 {% block content %}
 <p>List of all Componenets Submitted to Wgen Shelf</p>
+
+{% for comp in components -%}
+  {{ comp.name }}
+{%- endfor %}
+
 {% endblock %}
