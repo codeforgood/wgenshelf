@@ -3,6 +3,9 @@
 {% block content %}
 {% autoescape true %}
 <h2>{{component.name}}</h2>
+<div class="rating">
+	<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+</div>
 <p>{{component.desc}}</p>
 <a>{{component.url}}</a>
 {% if {{component.code}} %}
