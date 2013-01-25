@@ -1,5 +1,6 @@
 var  express = require('express'),
-	   engines = require('consolidate');
+	   engines = require('consolidate'),
+	   swig = require('swig'),
 	   shelf = require('./server/modules/shelf.js');
 
 var app = express();
@@ -11,6 +12,8 @@ app.engine('html', engines.swig);
 // set .html as the default extension 
 app.set('view engine', 'html');
 app.set('views', __dirname + '/client/tpl');
+
+swig.init({ root: __dirname + '/client/tpl', allowErrors: true });
 
 app.configure(function () {
     app.use(express.logger('default'));     /* 'default', 'short', 'tiny', 'dev' */
@@ -26,6 +29,11 @@ app.listen(port, function() {
 
 /******Routes*******/
 app.get('/', function(req, res) {
+	res.render('index', {
+    	app: 'Wgen Shelf'
+  	});
+});
+app.get('/wgenshelf', function(req, res) {
 	res.render('index', {
     	app: 'Wgen Shelf'
   	});
