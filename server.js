@@ -21,7 +21,7 @@ app.configure(function () {
     app.use(express.bodyParser());
 });
 
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 5002;
 
 app.listen(port, function() {
   console.log("Wgen Shelf Server Listening on " + port);
