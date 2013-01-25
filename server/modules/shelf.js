@@ -19,9 +19,15 @@ var ComponentSchema = mongoose.Schema({
 var Component = mongoose.model('Component', ComponentSchema)
 
 exports.getComponents = function(req, res){
-	res.render('viewcomponents', {
-    	app: 'Wgen Shelf'
-  	});
+
+	Component.find({},'name desc', function (err, components) {
+ 		if (err) return handleError(err);
+  		console.log(components);
+  		res.render('viewcomponents', {
+    		'app': 'Wgen Shelf',
+    		'components': components
+  		});
+	});
 };
 
 exports.addComponent = function(req, res){
