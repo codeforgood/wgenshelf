@@ -14,7 +14,7 @@ app.set('views', __dirname + '/client/tpl');
 
 app.configure(function () {
     app.use(express.logger('default'));     /* 'default', 'short', 'tiny', 'dev' */
-    app.use('/static', express.static(__dirname + '/client'));
+    app.use(express.static(__dirname + '/client'));
 });
 
 var port = process.env.PORT || 5000;
@@ -32,4 +32,5 @@ app.get('/', function(req, res) {
 });
 
 app.get('/wgenshelf/components', shelf.getComponents);
+app.get('/wgenshelf/addcomponent', shelf.addComponent);
 /******Routes*******/
