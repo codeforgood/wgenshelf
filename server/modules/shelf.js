@@ -1,7 +1,9 @@
 var mongoose = require('mongoose'),
 	Fs = require('fs');
 
-mongoose.connect('mongodb://localhost/wgenshelf');
+var mongoUri = 'mongodb://heroku_app11362279:1st2dvsvqnnemq5q21h61m751@ds049467.mongolab.com:49467/heroku_app11362279' || 'mongodb://localhost/wgenshelf';
+
+mongoose.connect(mongoUri);
 
 var conn = mongoose.connection;
 
