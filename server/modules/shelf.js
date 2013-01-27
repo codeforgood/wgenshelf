@@ -38,6 +38,16 @@ exports.addComponent = function(req, res){
   	});
 };
 
+exports.voteComponent = function(req, res){
+	console.log(req.params.id);
+
+	Component.update({'_id': req.params.id}, { $inc: { votes: 1 }}, function (err, success) {
+ 		if (err) return handleError(err);
+  		console.log(success);
+  		res.send(success);
+  	});
+};
+
 exports.getComponent = function(req, res){
 	console.log(req.params.id);
 

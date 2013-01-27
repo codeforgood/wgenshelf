@@ -44,4 +44,7 @@ app.get('/wgenshelf/components', shelf.getComponents);
 app.get('/wgenshelf/addcomponent', shelf.addComponent);
 
 app.post('/wgenshelf/submitcomponent', shelf.submitComponent);
+app.post('/wgenshelf/submitcomponent', shelf.submitComponent);
+
+app.get('/wgenshelf/votecomponent/:id', shelf.voteComponent);
 /******Routes*******/
